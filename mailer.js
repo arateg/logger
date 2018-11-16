@@ -25,7 +25,8 @@ module.exports = class MailSender {
     }
 
     createMessage(reportObject, emailSubject) {
-        return {
+       // create response message which is used in nodemailer sentMail method
+	 return {
             from: this.author, 
             to: this.receivers,
             subject: `${emailSubject} ON ${this.domain}`,
@@ -34,6 +35,8 @@ module.exports = class MailSender {
     }
 
     getReceiversEmails () {
+	// Looking for field EMAIL_RECEIVERS in .env file. Raise error if field is not found.
+	// And set receiver address the same as author address.
         const receiversAddresses = []
         try {
             receiversAddresses.push(process.env.EMAIL_RECEIVERS.split().map(email => email.trim()));
