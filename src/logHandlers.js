@@ -1,6 +1,6 @@
 const logger = require('./logger');
 const Mailer = require('./mailer');
-const { redlog, greenlog, cyanlog, magentalog } = require('./colorizing');
+const { redlog, greenlog, cyanlog, magentalog, graylog } = require('./colorizing');
 
 module.exports = {
     daemon: (message, report) => {
@@ -20,7 +20,7 @@ module.exports = {
         logger.log('error', message, report)
     },
     full: (message, report) => {
-        magentalog(message, report);
+        graylog(message, report);
         logger.log('silly', message, report)
     },
     warn: (message, report) => {

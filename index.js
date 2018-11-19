@@ -1,3 +1,1 @@
-module.exports = {
-    logger: require('./src/proxyLog')
-};
+module.exports = require('./src/proxyLog')
