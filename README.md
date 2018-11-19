@@ -1,6 +1,5 @@
 CUSTOMIZED COLOR LOGGER
-<br><br>
-----
+
 ***The logger has opportunies to print color messages and also send emails.***
 
 You can write your own method names of logger and it is supported!  
