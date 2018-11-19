@@ -10,6 +10,7 @@ const redlog = coloredConsole('red');
 const greenlog = coloredConsole('green');
 const cyanlog = coloredConsole('cyan');
 const yellowlog = coloredConsole('yellow');
+const graylog = coloredConsole('gray');
 const magentalog = coloredConsole('magenta');
 
 module.exports = {
@@ -17,5 +18,6 @@ module.exports = {
     greenlog,
     cyanlog,
     yellowlog,
-    magentalog
+    magentalog,
+    graylog
 }
