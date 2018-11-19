@@ -1,0 +1,25 @@
+{
+  "name": "colorlogger",
+  "version": "1.0.0",
+  "description": "",
+  "main": "colorizing.js",
+  "dependencies": {
+    "chalk": "^2.4.1",
+    "dotenv": "^6.1.0",
+    "nodemailer": "^4.6.8",
+    "winston": "^3.1.0",
+    "moment": "^2.22.2",
+    "winston-daily-rotate-file": "^3.5.1"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@bitbucket.org/vitaliarykau/colorlogger.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "homepage": "https://bitbucket.org/vitaliarykau/colorlogger#readme"
+}
