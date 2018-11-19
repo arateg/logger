@@ -25,7 +25,7 @@ EMAIL_RECEIVERS='other@gmail.com'
 ```
 ##### ***index.js***
 ```light block 
-const logger = require('logger');
+const logger = require('@arateg/logger');
 logger.iWantInfo('Message for admin', { something: 'Hello', someField: 'Great!' });
 logger.warnLogWithEmail('Print and send Mail', { error: 'No error', sweetCakes: 'Give me 3!!!' });
 ```
