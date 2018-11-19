@@ -1,4 +1,5 @@
-CUSTOMIZED COLOR LOGGER  
+CUSTOMIZED COLOR LOGGER
+<br><br>
 ----
 ***The logger has opportunies to print color messages and also send emails.***
 
