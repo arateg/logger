@@ -1,6 +1,6 @@
 const winston = require('winston');
 const config = require('./config');
-require('winston-daily-rotate-file');
+winston.transports.DailyRotateFile = require('winston-daily-rotate-file');
 
 const logPath = config.logFolder;
 const transports = [];
