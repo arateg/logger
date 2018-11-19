@@ -2,10 +2,8 @@ const nodemailer = require('nodemailer');
 
 const { redlog, yellowlog } = require('./colorizing');
 
-
 // Turn On if you got an error:  Invalid login: 534-5.7.14 
 // https://myaccount.google.com/lesssecureapps
-
 
 module.exports = class MailSender {
 

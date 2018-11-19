@@ -1,13 +1,14 @@
 const winston = require('winston');
+const config = require('./config');
 require('winston-daily-rotate-file');
 
-const logPath = __dirname + '/logs';
-const appTransports = [];
+const logPath = config.logFolder;
+const transports = [];
 
 
 const transportFile = new (winston.transports.DailyRotateFile)({
   dirname: logPath,
-  filename: 'TMSLogError-%DATE%.log',
+  filename: 'LogError-%DATE%.log',
   datePattern: 'YYYY-MM-DD',
   zippedArchive: true,
   maxSize: '200m',
@@ -23,7 +24,7 @@ const transportFile = new (winston.transports.DailyRotateFile)({
 
 const transportCombined = new (winston.transports.DailyRotateFile)({
   dirname: logPath,
-  filename: 'TMSLogCombined-%DATE%.log',
+  filename: 'LogCombined-%DATE%.log',
   datePattern: 'YYYY-MM-DD',
   zippedArchive: true,
   maxSize: '500m',
@@ -43,12 +44,10 @@ transportFile.on('rotate', (oldFilename, newFilename) => {
   console.log('===== New log file =====');
 });
 
-appTransports.push(transportFile, transportCombined);
+transports.push(transportFile, transportCombined);
 
 const logger = winston.createLogger({
-  transports: [
-    ...appTransports
-  ]
+  transports
 });
 
 module.exports = logger;

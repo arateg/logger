@@ -1,8 +1,8 @@
 {
-  "name": "colorlogger",
+  "name": "@arateg/logger",
   "version": "1.0.0",
-  "description": "",
-  "main": "colorizing.js",
+  "description": "A logger that supports colors, date rotate, custom log handlers",
+  "main": "index.js",
   "dependencies": {
     "chalk": "^2.4.1",
     "dotenv": "^6.1.0",
@@ -17,9 +17,9 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+ssh://git@bitbucket.org/vitaliarykau/colorlogger.git"
+    "url": "https://github.com/arateg/logger"
   },
-  "author": "",
+  "author": "Arateg",
   "license": "ISC",
-  "homepage": "https://bitbucket.org/vitaliarykau/colorlogger#readme"
+  "homepage": "https://github.com/arateg/logger"
 }
