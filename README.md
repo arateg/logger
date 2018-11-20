@@ -61,7 +61,7 @@ logger.<method>(string, object)
   
 ## Log files:
 Logger creates a folder for logs regarding `LOG_FOLDER` in `.env` file.
-If `LOG_FOLDER` is not existed in `.env` file then logs will be saved `process.cwd() + /logs` directory.
+If `LOG_FOLDER` is not existed in `.env` file then logs will be saved in `process.cwd() + /logs` directory.
 There is a message in console `===== New log file =====` when new file is created each day.  
 Logger creates a new 2 files each day, where `%DATE%` has a format `YYYY-MM-DD`. :
 + `LogError-%DATE%.log`. These files are related to `_error` log level.
