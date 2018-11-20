@@ -21,7 +21,7 @@
     "sysadmin",
     "loglevel",
     "tools",
-    "json",
+    "json"
   ],
   "main": "index.js",
   "dependencies": {
