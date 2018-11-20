@@ -60,8 +60,8 @@ logger.<method>(string, object)
 + `"_warn"` - print log in magenta  ![#CE5CFF](https://placehold.it/10/CE5CFF/000000?text=+) color. Has `warn` log level.
   
 ## Log files:
-Logger creates a folder for logs regarding `LOG_FOLDER` in `.env` file.
-There is a message in console `===== New log file =====` when new file is created each day.
+Logger creates a folder for logs regarding `LOG_FOLDER` in `.env` file.  
+There is a message in console `===== New log file =====` when new file is created each day.  
 Logger creates a new 2 files each day, where `%DATE%` has a format `YYYY-MM-DD`. :
 + `LogError-%DATE%.log`. These files are related to `_error` log level.
 + `LogCombined-%DATE%.log`. These files are related to `silly` log level.
