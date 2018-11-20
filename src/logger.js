@@ -21,7 +21,7 @@ const transportFile = new (winston.transports.DailyRotateFile)({
             }),
             winston.format.json()
   )
-}, { level: "error" });
+});
 
 const transportCombined = new (winston.transports.DailyRotateFile)({
   dirname: logPath,
