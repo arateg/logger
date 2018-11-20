@@ -4,7 +4,6 @@ const methodHandlers = require('./logHandlers');
 
 module.exports =  new Proxy(console, {
     get(target, name) {
-        if(typeof target[name] === 'function') return Reflect.get(target, name);
 
         const chosen = [];
 
@@ -13,6 +12,8 @@ module.exports =  new Proxy(console, {
                 chosen.push(variant);
             }
         });
+        
+        if(!chosen.length && typeof target[name] === 'function') return Reflect.get(target, name);
 
         return (...args) => {
             chosen.forEach(methodName => methodHandlers[methodName](...args))
