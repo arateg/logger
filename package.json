@@ -1,6 +1,6 @@
 {
   "name": "@arateg/logger",
-  "version": "1.0.1",
+  "version": "1.0.3",
   "description": "A logger that supports colors, date rotate, custom log handlers",
   "main": "index.js",
   "dependencies": {

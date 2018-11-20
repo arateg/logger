@@ -13,6 +13,7 @@ const transportFile = new (winston.transports.DailyRotateFile)({
   zippedArchive: true,
   maxSize: '200m',
   maxFiles: '30d',
+  level: "error",
   json: true,
   format: winston.format.combine(
             winston.format.timestamp({
