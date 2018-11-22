@@ -14,7 +14,8 @@ File .env must contain 5 values:
   2. **`SMTP_PASS`** - ***string.*** *Password for smtp user.*
   3. **`SMTP_HOST1`** - ***string.*** *SMTP host service.*
   4. **`EMAIL_RECEIVERS`** - ***string or array.*** *Emails for messages.*
-  5. **`LOG_FOLDER`** - ***string.*** *Folder to save log files.*
+  5. **`SLACK_ACCESS_TOKEN`** - ***string.*** *Access token from your application in slack.*
+  6. **`SLACK_RECEIVER`** - ***string.*** *ID of person or channel in slack where to send messages.*
 
 
 ##### ***.env*** example
@@ -24,12 +25,15 @@ SMTP_PASS='password'
 SMTP_HOST='smtp.gmail.com'
 EMAIL_RECEIVERS='other@gmail.com'
 LOG_FOLDER='/var/logs/myapp'
+SLACK_ACCESS_TOKEN='xoxp-111111111111-111111111111-111111111111-111111111111aaaaaaaaaaaaaaaaaaaa'
+SLACK_RECEIVER='ZZZZZZZZZ'
 ```
 ##### ***index.js***
 ```light block 
 const logger = require('@arateg/logger');
 logger.iWantInfo('Message for admin', { something: 'Hello', someField: 'Great!' });
 logger.warnLogWithEmail('Print and send Mail', { error: 'No error', sweetCakes: 'Give me 3!!!' });
+logger.letMeSlackNotify('Message in slack please', { thisLoggerRank: 'GOAT' });
 ```
 
 ## API 
@@ -44,6 +48,7 @@ logger.<method>(string, object)
    + email
    + error
    + full
+   + slack
    + warn
  2. Combine these words with any other words you want and create convient method name.
  3. Add a string as the 1st argument(message) and an object as the 2nd.
@@ -57,6 +62,7 @@ logger.<method>(string, object)
 + `"email"` - send a message with report to email. Print message of successful in yellow ![#E3DA14](https://placehold.it/10/E3DA14/000000?text=+) color. If some error when sending print message in red ![#EE4218](https://placehold.it/10/EE4218/000000?text=+) color to console.
 + `"error"` - print log in red ![#EE4218](https://placehold.it/10/EE4218/000000?text=+) color. Has `error` log level.
 + `"full"` - print log in gray ![#A1A1A1](https://placehold.it/10/A1A1A1/000000?text=+) color. Has `silly` log level.
++ `"slackq"` - send a message with report to slack. Print message of successful in yellow ![#E3DA14](https://placehold.it/10/E3DA14/000000?text=+) color. If some error when sending print message in red ![#EE4218](https://placehold.it/10/EE4218/000000?text=+) color to console.
 + `"warn"` - print log in magenta  ![#CE5CFF](https://placehold.it/10/CE5CFF/000000?text=+) color. Has `warn` log level.
   
 ## Log files:
