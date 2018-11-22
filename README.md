@@ -14,8 +14,9 @@ File .env must contain 5 values:
   2. **`SMTP_PASS`** - ***string.*** *Password for smtp user.*
   3. **`SMTP_HOST1`** - ***string.*** *SMTP host service.*
   4. **`EMAIL_RECEIVERS`** - ***string or array.*** *Emails for messages.*
-  5. **`SLACK_ACCESS_TOKEN`** - ***string.*** *Access token from your application in slack.*
-  6. **`SLACK_RECEIVER`** - ***string.*** *ID of person or channel in slack where to send messages.*
+  5. **`LOG_FOLDER`** - ***string.*** *Folder to save log files.*
+  6. **`SLACK_ACCESS_TOKEN`** - ***string.*** *Access token from your application in slack.*
+  7. **`SLACK_RECEIVER`** - ***string.*** *ID of person or channel in slack where to send messages.*
 
 
 ##### ***.env*** example
