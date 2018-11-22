@@ -62,7 +62,7 @@ logger.<method>(string, object)
 + `"email"` - send a message with report to email. Print message of successful in yellow ![#E3DA14](https://placehold.it/10/E3DA14/000000?text=+) color. If some error when sending print message in red ![#EE4218](https://placehold.it/10/EE4218/000000?text=+) color to console.
 + `"error"` - print log in red ![#EE4218](https://placehold.it/10/EE4218/000000?text=+) color. Has `error` log level.
 + `"full"` - print log in gray ![#A1A1A1](https://placehold.it/10/A1A1A1/000000?text=+) color. Has `silly` log level.
-+ `"slackq"` - send a message with report to slack. Print message of successful in yellow ![#E3DA14](https://placehold.it/10/E3DA14/000000?text=+) color. If some error when sending print message in red ![#EE4218](https://placehold.it/10/EE4218/000000?text=+) color to console.
++ `"slack"` - send a message with report to slack. Print message of successful in yellow ![#E3DA14](https://placehold.it/10/E3DA14/000000?text=+) color. If some error when sending print message in red ![#EE4218](https://placehold.it/10/EE4218/000000?text=+) color to console.
 + `"warn"` - print log in magenta  ![#CE5CFF](https://placehold.it/10/CE5CFF/000000?text=+) color. Has `warn` log level.
   
 ## Log files:
