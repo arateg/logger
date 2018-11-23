@@ -12,7 +12,7 @@ $ npm i @arateg/logger --save
 File .env must contain 5 values: 
   1. **`SMTP_USER`** - ***string.*** *User who will send messages.*
   2. **`SMTP_PASS`** - ***string.*** *Password for smtp user.*
-  3. **`SMTP_HOST1`** - ***string.*** *SMTP host service.*
+  3. **`SMTP_HOST`** - ***string.*** *SMTP host service.*
   4. **`EMAIL_RECEIVERS`** - ***string or array.*** *Emails for messages.*
   5. **`LOG_FOLDER`** - ***string.*** *Folder to save log files.*
   6. **`SLACK_ACCESS_TOKEN`** - ***string.*** *Access token from your application in slack.*
