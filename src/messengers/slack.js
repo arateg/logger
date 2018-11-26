@@ -1,20 +1,30 @@
 const { WebClient } = require('@slack/client');
 
-const { slackReceiver } = require('../config')
+const AbstractMessenger = require('./messenger');
 
-class Slack {
-    constructor(receiver=process.env.SLACK_RECEIVER) { 
-        this.slackClient = new WebClient(process.env.SLACK_ACCESS_TOKEN);
-        this.receiver = receiver;
-    };
-    
-    async sendMessage(message) {
-        const response = await this.slackClient.chat.postMessage({
-            channel: this.receiver,
+
+class SlackWebClient extends WebClient {
+    async sendNotification(message, receiver) {
+        return await this.chat.postMessage({
+            channel: receiver,
             text: message,
         });
-        return response;
     }
+}
+
+
+class Slack extends AbstractMessenger {
+    constructor(receiver=process.env.SLACK_RECEIVER) { 
+        if(!Slack.instance) {
+            super(new SlackWebClient(process.env.SLACK_ACCESS_TOKEN), receiver);
+            Slack.instance = this;
+        }
+        return Slack.instance;
+    };
+
 };
 
-module.exports = Slack;
+
+const SlackInstance = new Slack();
+Object.freeze(SlackInstance);
+module.exports = SlackInstance;

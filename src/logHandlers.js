@@ -1,7 +1,7 @@
 const logger = require('./logger');
 const Mailer = require('./mailer');
 const { redlog, greenlog, cyanlog, magentalog, graylog, yellowlog } = require('./colorizing');
-const messenger = require('./messengers/messenger');
+const Slack = require('./messengers/slack');
 
 
 module.exports = {
@@ -31,7 +31,7 @@ module.exports = {
     },
     slack: async (message, report) => {
         try {
-        const response = await messenger.sendNotification('slack', report);
+        const response = await Slack.sendMessage(report);
         yellowlog('Sent to slack', response);
         } catch(error) {
             redlog(`Did not sent to slack log: ${JSON.stringify(report)} ||`, {reason: error.message})

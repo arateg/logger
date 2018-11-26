@@ -1,22 +1,13 @@
-const Slack = require('./slack');
-
-const messengers = {
-    'slack': Slack
-    }
 
 class Messenger {
-
-    static getMessenger(messengerName) {
-        const messenger = messengers[messengerName];
-        if (!messenger) { throw new Error('Incorrect messenger name!')};
-        return new messenger()
+    constructor(client, receiver) {
+        this.client = client;
+        this.receiver = receiver
     }
 
-    static async sendNotification(messengerName, message) {
-        const messenger = Messenger.getMessenger(messengerName)
-        const response = await messenger.sendMessage(message);
-        return response
-    }
+    async sendMessage(message) {
+        return await this.client.sendNotification(message, this.receiver);
+    };
 }
 
 module.exports = Messenger;
