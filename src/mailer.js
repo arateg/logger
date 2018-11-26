@@ -1,5 +1,6 @@
 const nodemailer = require('nodemailer');
 
+const { domain } = require('./config')
 const { redlog, yellowlog } = require('./colorizing');
 
 // Turn On if you got an error:  Invalid login: 534-5.7.14 
@@ -10,7 +11,7 @@ module.exports = class MailSender {
     constructor() {
         this.author = process.env.SMTP_USER;
         this.receivers = this.getReceiversEmails();
-        this.domain = process.env.DOMAIN || require('os').networkInterfaces()['wlp3s0'][0].address;
+        this.domain = domain;
         this.transport = nodemailer.createTransport({
             host: process.env.SMTP_HOST,
             port: process.env.SMTP_PORT || 25,
