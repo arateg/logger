@@ -14,8 +14,8 @@ module.exports = {
         logger.log('info', message, report)
     },
     email: async (message, report) => {
-        const GmailSender = new Mailer();
-        await GmailSender.sendMail(report);
+        const MailSender = new Mailer();
+        await MailSender.sendMail(report);
         },
     error: (message, report) => {
         redlog(message, report);
@@ -30,6 +30,7 @@ module.exports = {
         logger.log('warn', message, report)
     },
     slack: async (message, report) => {
+        report['timestamp'] = new Date();
         try {
         const response = await Slack.sendMessage(report);
         yellowlog('Sent to slack', response);

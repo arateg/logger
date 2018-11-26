@@ -1,4 +1,3 @@
-
 class Messenger {
     constructor(client, receiver) {
         this.client = client;
