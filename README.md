@@ -29,6 +29,7 @@ EMAIL_RECEIVERS='other@gmail.com'
 LOG_FOLDER='/var/logs/myapp'
 SLACK_ACCESS_TOKEN='xoxp-111111111111-111111111111-111111111111-111111111111aaaaaaaaaaaaaaaaaaaa'
 SLACK_RECEIVER='ZZZZZZZZZ'
+DOMAIN='mysite.com'
 ```
 ##### ***index.js***
 ```light block 
