@@ -35,7 +35,7 @@ module.exports = {
         const response = await Slack.sendMessage(report);
         yellowlog('Sent to slack', response);
         } catch(error) {
-            redlog(`Did not sent to slack log: ${JSON.stringify(report)} ||`, {reason: error.message})
+            redlog(`Did not sent to slack log: ${JSON.stringify(report)} ||`, { reason: error.message })
         }
     }
 }

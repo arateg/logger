@@ -17,6 +17,7 @@ File .env must contain 5 values:
   5. **`LOG_FOLDER`** - ***string.*** *Folder to save log files.*
   6. **`SLACK_ACCESS_TOKEN`** - ***string.*** *Access token from your application in slack.*
   7. **`SLACK_RECEIVER`** - ***string.*** *ID of person or channel in slack where to send messages.*
+  8. **`DOMAIN`** - ***string.*** *Domain name which is used in email message header on `email` log level*
 
 
 ##### ***.env*** example
