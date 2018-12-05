@@ -1,5 +1,6 @@
 require('dotenv').config();
 
 module.exports = {
-    logFolder: process.env.LOG_FOLDER || `${process.cwd()}/logs`
+    logFolder: process.env.LOG_FOLDER || `${process.cwd()}/logs`,
+    domain: process.env.DOMAIN
 }

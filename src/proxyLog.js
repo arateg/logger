@@ -1,5 +1,3 @@
-require('dotenv').config();
-
 const methodHandlers = require('./logHandlers');
 
 module.exports =  new Proxy(console, {

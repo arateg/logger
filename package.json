@@ -1,6 +1,6 @@
 {
   "name": "@arateg/logger",
-  "version": "1.0.8",
+  "version": "1.1.0",
   "description": "A logger that supports colors, date rotate, custom log handlers",
   "keywords": [
     "arateg",
@@ -25,11 +25,12 @@
   ],
   "main": "index.js",
   "dependencies": {
+    "@slack/client": "^4.8.0",
     "chalk": "^2.4.1",
     "dotenv": "^6.1.0",
+    "moment": "^2.22.2",
     "nodemailer": "^4.6.8",
     "winston": "^3.1.0",
-    "moment": "^2.22.2",
     "winston-daily-rotate-file": "^3.5.1"
   },
   "devDependencies": {},
