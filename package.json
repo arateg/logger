@@ -21,7 +21,8 @@
     "sysadmin",
     "loglevel",
     "tools",
-    "json"
+    "json",
+    "slack"
   ],
   "main": "index.js",
   "dependencies": {

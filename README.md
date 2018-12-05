@@ -1,6 +1,6 @@
 CUSTOMIZED COLOR LOGGER
 ===
-***The logger has opportunities to print color messages and also send emails.***
+***The logger has opportunities to print color messages and also send emails or messages to slack***
 
 You can write your own method names of logger and they are supported!  
 ## Install 
